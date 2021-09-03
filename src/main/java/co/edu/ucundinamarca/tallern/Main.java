@@ -1,6 +1,7 @@
 
 package co.edu.ucundinamarca.tallern;
 
+import java.util.Scanner;
 import org.apache.log4j.Logger;
 
 /**
@@ -11,10 +12,11 @@ import org.apache.log4j.Logger;
 public class Main {
 
     static Logger log = Logger.getLogger(Main.class.getName());
-
+    Scanner lectura = new Scanner(System.in);
+    
     public static void main(String[] args) {
-        log.debug("Hello World : this is a debug message");
-        log.info("Hello World : this is an info message");
+        
+
     }
 
 }
