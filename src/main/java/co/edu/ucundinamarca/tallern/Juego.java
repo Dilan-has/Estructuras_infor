@@ -18,13 +18,13 @@ public class Juego {
       }
       
       public void MuestrasVidasRestantes(){
-          log.debug("Las vidas restantes son: " + vidas);
+          log.info("Las vidas restantes son: " + vidas);
       }
       
       public void QuitaVida(){
           vidas=vidas-1;   
           if (vidas<0){
-              log.debug("Juego terminado");
+              log.info("Juego terminado");
           }
       }
       
@@ -34,10 +34,10 @@ public class Juego {
       
       public void ActualizarRecord(){
           if (vidas==record){
-              log.debug("record alcanzado");
+              log.info("record alcanzado");
           }
           if (vidas>record){
-              log.debug("Se ha superado el record \n"+ "nievo redord: " + vidas);
+              log.info("Se ha superado el record \n"+ "nuevo redord: " + vidas);
           }
       }
 }
