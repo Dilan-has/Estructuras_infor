@@ -25,6 +25,7 @@ public class Juego {
           vidas=vidas-1;   
           if (vidas<0){
               log.info("Juego terminado");
+              System.exit(0);
           }
       }
       
