@@ -4,30 +4,24 @@ import java.util.Scanner;
 import org.apache.log4j.Logger;
 
 /**
- * Clase Principal
  *
- * @author handresortiz
+ * @author dhper
  */
-public class Main {
-    
+public class MainAnimal {
+
     static Logger log = Logger.getLogger(Main.class.getName());
     Scanner lectura = new Scanner(System.in);
 
     public static void main(String[] args) {
-    
 
-    Persona personaUno = new Persona("Hanner", 10, 20);
-    Persona personaDos = new Persona("Hanner", 10, 20);
+        Animal AnimalUno = new Animal("Perro", 5, 01, "Canino", 4);
+        Animal AnimalDos = new Animal("Gato", 3, 02, "Felino", 4);
 
-    if (personaUno.equals (personaDos) 
-        ) {
+        if (AnimalUno.equals(AnimalDos)) {
             log.info("******* Instacias Iguales *********");
-    }
-
-    
-        else {
+        } else {
             log.info("******* Instacias Diferentes *********");
-    }
+        }
 
-}
+    }
 }
