@@ -33,7 +33,7 @@ public class Fact_Pot {
 
     }
 
-    public long potencia(int base, int exponente) {
+    public static long potencia(int base, int exponente) {
 
         if (exponente == 0) {
             return 1;
