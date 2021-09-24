@@ -7,14 +7,14 @@ public class Main {
 
     static Logger log = Logger.getLogger(Main.class.getName());
 
-    Fact_Pot ejemploUno = new Fact_Pot();
+    Funciones ejemploUno = new Funciones();
 
     public static void ItFact() {
         int factIt = 0;
         Scanner sc = new Scanner(System.in);
         log.info("Ingrese un numero para calcular el factorial");
         factIt = sc.nextInt();
-        log.info("Iterativo factorial: " + Fact_Pot.factorial(factIt));
+        log.info("Iterativo factorial: " + Funciones.factorial(factIt));
     }
 
     public static void RecFact() {
@@ -22,7 +22,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         log.info("Ingrese un numero para calcular el factorial");
         factRec = sc.nextInt();
-        log.info("Recursivo factorial: " + Fact_Pot.factorialRec(factRec));
+        log.info("Recursivo factorial: " + Funciones.factorialRec(factRec));
     }
 
     public static void pot() {
@@ -34,7 +34,7 @@ public class Main {
         base = sc.nextInt();
         log.info("Ingrese un exponente");
         exponente = sc.nextInt();
-        log.info("Recursivo potencia: " + Fact_Pot.potencia(base, exponente));
+        log.info("Recursivo potencia: " + Funciones.potencia(base, exponente));
     }
 
     public static void main(String[] args) {

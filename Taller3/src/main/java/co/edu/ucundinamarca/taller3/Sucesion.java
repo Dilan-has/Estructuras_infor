@@ -63,12 +63,21 @@ public class Sucesion {
     public static double SucesionIt(int n) {
 
         int i = 0;
+        
+        if(n==0){
+            return 1;
+        }
+        
+        else if(n==1){
+            return 2;
+        }
+        
 
         do {
 
-            return (0.91 * sucesion(n - 1)) + (0.1 * sucesion(n - 2));
+            return (0.91 * SucesionIt(n - 1)) + (0.1 * SucesionIt(n - 2));
 
-        } while (i < n);
+        } while (n < 0);
 
     }
 

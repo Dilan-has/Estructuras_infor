@@ -2,7 +2,7 @@ package co.edu.ucundinamarca.taller3;
 
 import org.apache.log4j.Logger;
 
-public class Fact_Pot {
+public class Funciones {
 
     static Logger log = Logger.getLogger(Main.class.getName());
 
