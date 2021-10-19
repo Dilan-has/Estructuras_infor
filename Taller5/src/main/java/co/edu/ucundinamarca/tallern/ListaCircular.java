@@ -11,6 +11,8 @@ public class ListaCircular {
     nodo primero;
     nodo ultimo;
 
+    int tamanio;
+
     public ListaCircular() {
         primero = null;
         ultimo = null;
@@ -29,6 +31,31 @@ public class ListaCircular {
             nuevo.siguiente = primero;
             ultimo = nuevo;
         }
+
+        tamanio++;
+    }
+
+    public void agregarAlInicio(int valor) {
+
+        nodo actual = new nodo();
+        actual = primero;
+        
+        actual.setValor(valor);
+
+        if (esVacia()) {
+            primero = actual;
+            ultimo = actual;
+            ultimo.setSiguiente(primero);
+        } else {
+            actual.setSiguiente(actual);
+            primero = actual;
+            ultimo.setSiguiente(actual);
+        }
+        tamanio++;
+    }
+
+    public boolean esVacia() {
+        return primero == null;
     }
 
     public void VerLista() {
@@ -81,9 +108,11 @@ public class ListaCircular {
             if (actual.dato == dato) {
                 if (actual == primero) {
                     primero = primero.siguiente;
-                }else if (actual == ultimo){
+                } else if (actual == ultimo) {
                     anterior.siguiente = ultimo.siguiente;
                     ultimo = anterior;
+                } else {
+                    anterior.siguiente = actual.siguiente;
                 }
             }
             anterior = actual;
@@ -91,4 +120,27 @@ public class ListaCircular {
         } while (actual != primero);
 
     }
+
+    public void OrdenarLista() {
+        nodo actual = new nodo();
+        nodo anterior = new nodo();
+        actual = primero;
+        anterior = ultimo;
+        do {
+            if (anterior.dato < ultimo.dato) {
+                anterior = actual;
+            }
+        } while (actual != primero);
+    }
+
+    public void Lista() {
+        primero = null;
+        ultimo = null;
+        tamanio = 0;
+    }
+
+    public int ContarNodos() {
+        return tamanio;
+    }
+
 }

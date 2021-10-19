@@ -17,15 +17,15 @@ public class MainLista {
         ListaCircular lista1 = new ListaCircular();
         
         lista1.ingresarNodo(25);
+        lista1.ingresarNodo(24);
+        lista1.ingresarNodo(23);
         lista1.ingresarNodo(26);
-        lista1.ingresarNodo(27);
-        lista1.ingresarNodo(28);
         
         lista1.VerLista();
         
-        lista1.ModificarNodo(26);
+        log.info(lista1.ContarNodos());
         
-        lista1.VerLista();
+
     }
 
 }
